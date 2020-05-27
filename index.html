@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            var count = 1
+            function FooR(time) {
+                for(let i=0; i<time; i++) {
+                    console.log(i)
+                }
+                count++
+            }
+        </script>
         <title>Script loading</title>
-        <script src="./script.js"></script>
     </head>
     <body>
         <p class="counter"></p>
+
+        <!-- <script defer src="./script.js"></script> -->
+        <script>
+            FooR(1000)
+            console.log('Loaded script (inline) ' + count)
+        </script>
+
         <img src="./img/awesome.jpeg" alt="">
+
+        <script>
+            FooR(10000)
+            console.log('Loaded script (inline) ' + count)
+        </script>
+
         <img src="./img/couple.jpeg" alt="">
+
+        <script>
+            FooR(100)
+            console.log('Loaded script (inline) ' + count)
+        </script>
+
         <img src="./img/girlLooksMountain.jpeg" alt="">
         <img src="./img/landing.jpeg" alt="">
         <img src="./img/photographer.jpeg" alt="">
