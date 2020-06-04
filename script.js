@@ -1,9 +1,27 @@
-let pElem = document.querySelector('.counter')
+setTimeout(() => {
+    console.log('load 1')
 
-for(let i=0; i<10000; i++) {
-    console.log(i)
+    fetch('https://jsonplaceholder.typicode.com/comments')
+        .then(response => response.json())
+        .then(json => console.log(json))
 
-    // pElem.textContent = ''
-    // pElem.textContent = i
-}
-console.log('Loaded js')
+    fetch('https://jsonplaceholder.typicode.com/albums')
+        .then(response => response.json())
+        .then(json => console.log(json))
+
+    fetch('https://jsonplaceholder.typicode.com/photos')
+        .then(response => response.json())
+        .then(json => console.log(json))
+}, 7000)
+
+fetch('https://jsonplaceholder.typicode.com/comments')
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+fetch('https://jsonplaceholder.typicode.com/albums')
+    .then(response => response.json())
+    .then(json => console.log(json))
+
+fetch('https://jsonplaceholder.typicode.com/photos')
+    .then(response => response.json())
+    .then(json => console.log(json))

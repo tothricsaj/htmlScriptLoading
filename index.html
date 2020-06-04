@@ -13,31 +13,34 @@
         <title>Script loading</title>
     </head>
     <body>
-        <p class="counter"></p>
+        <p class="counter">init</p>
 
         <!-- <script defer src="./script.js"></script> -->
-        <script>
-            FooR(1000)
-            console.log('Loaded script (inline) ' + count)
-        </script>
+        <script async src="./script.js"></script>
 
+        <p>1</p>
         <img src="./img/awesome.jpeg" alt="">
 
         <script>
-            FooR(10000)
-            console.log('Loaded script (inline) ' + count)
+            setTimeout(() => {
+                console.log('load 2')
+            }, 3000)
         </script>
 
-        <img src="./img/couple.jpeg" alt="">
+        <p>2</p>
+
+        <!-- <img src="./img/couple.jpeg" alt=""> -->
 
         <script>
-            FooR(100)
-            console.log('Loaded script (inline) ' + count)
+            setTimeout(() => {
+                console.log('load 3')
+            }, 4000)
         </script>
 
-        <img src="./img/girlLooksMountain.jpeg" alt="">
+        <p>3</p>
+        <!-- <img src="./img/girlLooksMountain.jpeg" alt="">
         <img src="./img/landing.jpeg" alt="">
         <img src="./img/photographer.jpeg" alt="">
-        <img src="./img/shoes.jpeg" alt="">
+        <img src="./img/shoes.jpeg" alt=""> -->
     </body>
 </html>
